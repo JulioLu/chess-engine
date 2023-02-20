@@ -10,6 +10,7 @@
 // class Pawn;
 class Board{
 private:
+    // std::array<Pawn,8> whitePawns;
     Pawn whitePawns[numOfPowns];
     Pawn blackPawns[numOfPowns];
 
@@ -19,7 +20,11 @@ public:
     char board[boardSize][boardSize][3];
 
     Board();
-
+    
+    void MovePiece(Pawn pawn);
+    // std::array<Pawn,8> getWhitePawns(){
+    //     return whitePawns;
+    // }
     // void selectMove(uint8_t x, uint8_t y, Pice p){
     // int a=0;
     // for(int i=0; i<4; i++){
