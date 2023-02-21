@@ -22,10 +22,6 @@ char Piece::getColor(){
 }
 
 void Piece::setCoordinates(uint8_t x, uint8_t y){
-    // board[posision[0]][posision[1]][0]='_';
-    // board[posision[0]][posision[1]][1]'_';
     coordinates[0]= x;
     coordinates[1]= y;
-    // board[x][y][0] = color;
-    // board[x][y][1]='P';
 }

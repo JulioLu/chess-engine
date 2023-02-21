@@ -8,9 +8,9 @@ class Pawn : public Piece{
 public:
   Pawn():Piece(){};
 
-  Pawn(uint8_t pieceID, char color, uint8_t coordinateX, uint8_t coordinateY);//:Piece(pawnID, color, coordinateX, coordinateY);
-  // Pawn():Pice(uint8_t pawnID, char color, uint8_t coordinateX, uint8_t coordinateY){};
-  // Pawn(uint8_t pawnID, char color, uint8_t posisionX);
+  // Pawn(uint8_t pieceID, char color, uint8_t coordinateX, uint8_t coordinateY);
+  Pawn(uint8_t pieceID, char color, uint8_t coordinateX, uint8_t coordinateY):Piece(pieceID, color, coordinateX, coordinateY){}
+
 
 
 

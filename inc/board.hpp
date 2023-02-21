@@ -1,44 +1,23 @@
-// #pragma once
-
 #ifndef BOARD_H
 #define BOADR_H
 
-#include "pawn.hpp"
+
+#include <array>
+#include <cstdint>
+#include "player.hpp"
 
 #define boardSize 8
-#define numOfPowns 8
-// class Pawn;
+
 class Board{
 private:
-    // std::array<Pawn,8> whitePawns;
-    Pawn whitePawns[numOfPowns];
-    Pawn blackPawns[numOfPowns];
-
+    std::array<Player,2> players;
 public:
 
-    
     char board[boardSize][boardSize][3];
 
     Board();
-    
-    void MovePiece(Pawn pawn);
-    // std::array<Pawn,8> getWhitePawns(){
-    //     return whitePawns;
-    // }
-    // void selectMove(uint8_t x, uint8_t y, Pice p){
-    // int a=0;
-    // for(int i=0; i<4; i++){
-    //     if(x==posibleMoves[i][0]){
-    //       a++;
-    //     }
-    //     if(y==posibleMoves[0][i]){
-    //       a++;
-    //     }
-    // } 
-    // if(a==2){
-    //   setPosition(x,y,board);
-    // }
-//   }
+    void fillBoard();
+    void movePiece(std::array<uint8_t,2> oldCoordinates, std::array<uint8_t,2> newCoordinates);   
 };
 
 #endif
